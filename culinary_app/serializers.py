@@ -1,16 +1,11 @@
 from rest_framework import serializers
-from .models import User, Chef, Dish, Ingredient, Rating, Recomendation
+from .models import CustomUser, Dish, Ingredient, Rating, Recomendation
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ['username']
-
-class ChefSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Chef
-        fields = ['user', 'profile_picture']
+        model = CustomUser
+        fields = '__all__'
 
 class DishSerializer(serializers.ModelSerializer):
     class Meta:
