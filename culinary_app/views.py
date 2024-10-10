@@ -13,9 +13,11 @@ class DishViewSet(viewsets.ModelViewSet):
     queryset = Dish.objects.all()
     serializer_class = DishSerializer
 
+
 class IngredientViewSet(viewsets.ModelViewSet):
     queryset = Ingredient.objects.all()
     serializer_class = IngredientSerializer
+
 
 class RatingViewSet(viewsets.ModelViewSet):
     queryset = Rating.objects.all()
